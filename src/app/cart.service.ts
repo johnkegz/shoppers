@@ -18,7 +18,7 @@ export class CartService {
     return this.items;
   }
 
-  removeItems(){
+  clearCart(){
     this.items = [];
     return this.items;
   }
@@ -26,5 +26,5 @@ export class CartService {
   getShippingPrices() {
     return this.http.get<{type: string, price: number}[]>('/assets/shipping.json');
   }
-  
+
 }
